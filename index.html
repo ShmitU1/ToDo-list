@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="To Do List">
+    <meta name="description" content="Create your list of tasks you need to complete or things that you want to do.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shmitu1.github.io/ToDo-list/">
+    <meta property="og:title" content="To Do List">
+    <meta property="og:description" content="Create your list of tasks you need to complete or things that you want to do.">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    
+    <!-- LINKS -->
+    <link rel="icon" type="image/png" href="./img/square-check-regular.svg"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+
+    <!-- Title -->
     <title>Todo list</title>
 </head>
 <body>
@@ -16,7 +31,7 @@
     <main>
         <div class="input-container">
             <input type="text" class="todo-input" placeholder="Write your todo here...">
-            <button type="button" class="todo-btn">
+            <button type="button" class="todo-btn" aria-label="add todo button">
                 <i class="fas fa-plus-square"></i>
             </button>
             <div class="select">

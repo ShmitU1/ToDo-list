@@ -17,15 +17,15 @@ function addTodo() {
         alert('pole jest puste');
     } 
     else {
-    // Todo div
-        const todoDiv = document.createElement('div');
-        todoDiv.classList.add('todo');
+    // Todo li
+        const todoListItem = document.createElement('li');
+        todoListItem.classList.add('todo');
 
     // Create li element
-        const newTodo = document.createElement('li');
+        const newTodo = document.createElement('p');
         newTodo.textContent = todoInput.value;
         newTodo.classList.add('todo-list');
-        todoDiv.appendChild(newTodo);
+        todoListItem.appendChild(newTodo);
 
     // Add todo to localStorage
         saveLocalStorage(todoInput.value);
@@ -34,16 +34,18 @@ function addTodo() {
         const completedBtn = document.createElement('button');
         completedBtn.innerHTML = '<i class="fas fa-check"></i>';
         completedBtn.classList.add('complete-btn');
-        todoDiv.appendChild(completedBtn);
+        completedBtn.setAttribute('aria-label', 'Complete button');
+        todoListItem.appendChild(completedBtn);
 
     // trash btn
         const trashBtn = document.createElement('button');
         trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
         trashBtn.classList.add('trash-btn');
-        todoDiv.appendChild(trashBtn);
+        trashBtn.setAttribute('aria-label', 'delete todo button');
+        todoListItem.appendChild(trashBtn);
 
     // append to list
-        todoList.appendChild(todoDiv);
+        todoList.appendChild(todoListItem);
 
     // clear input value after addTodo
         todoInput.value = '';
@@ -131,58 +133,62 @@ function getTodos() {
     }
     //load completed todos
     completedTodos.forEach(todos => {
-        const todoDiv = document.createElement('div');
-        todoDiv.classList.add('todo');
+        const todoListItem = document.createElement('li');
+        todoListItem.classList.add('todo');
 
     // Create li element
-        const newTodo = document.createElement('li');
+        const newTodo = document.createElement('p');
         newTodo.textContent = todos;
         newTodo.classList.add('todo-list');
-        todoDiv.appendChild(newTodo);
+        todoListItem.appendChild(newTodo);
 
     // check mark btn
         const completedBtn = document.createElement('button');
         completedBtn.innerHTML = '<i class="fas fa-check"></i>';
         completedBtn.classList.add('complete-btn');
-        todoDiv.appendChild(completedBtn);
+        completedBtn.setAttribute('aria-label', 'Complete button');
+        todoListItem.appendChild(completedBtn);
 
     // trash btn
         const trashBtn = document.createElement('button');
         trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
         trashBtn.classList.add('trash-btn');
-        todoDiv.appendChild(trashBtn);
+        trashBtn.setAttribute('aria-label', 'delete todo button');
+        todoListItem.appendChild(trashBtn);
 
     // append to list
-        todoList.appendChild(todoDiv);
-        todoDiv.classList.add('completed');
+        todoList.appendChild(todoListItem);
+        todoListItem.classList.add('completed');
     })
 
 
     // load todos
     todos.forEach(todos => {
-        const todoDiv = document.createElement('div');
-        todoDiv.classList.add('todo');
+        const todoListItem = document.createElement('li');
+        todoListItem.classList.add('todo');
 
     // Create li element
-        const newTodo = document.createElement('li');
+        const newTodo = document.createElement('p');
         newTodo.textContent = todos;
         newTodo.classList.add('todo-list');
-        todoDiv.appendChild(newTodo);
+        todoListItem.appendChild(newTodo);
 
     // check mark btn
         const completedBtn = document.createElement('button');
         completedBtn.innerHTML = '<i class="fas fa-check"></i>';
         completedBtn.classList.add('complete-btn');
-        todoDiv.appendChild(completedBtn);
+        completedBtn.setAttribute('aria-label', 'Complete button');
+        todoListItem.appendChild(completedBtn);
 
     // trash btn
         const trashBtn = document.createElement('button');
         trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
         trashBtn.classList.add('trash-btn');
-        todoDiv.appendChild(trashBtn);
+        trashBtn.setAttribute('aria-label', 'delete todo button');
+        todoListItem.appendChild(trashBtn);
 
     // append to list
-        todoList.appendChild(todoDiv);
+        todoList.appendChild(todoListItem);
     })
 }
 

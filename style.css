@@ -81,7 +81,7 @@ header,
     overflow-wrap: anywhere;
 }
 
-.todo li {
+.todo > p {
     flex: 1;
 }
 
